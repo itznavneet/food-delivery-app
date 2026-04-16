@@ -32,6 +32,7 @@
 .header-contents button {
     border: none;
     /* margin-top: 20px; */
+    cursor: pointer;
     color: #747474;
     font-weight: 500;
     padding: 1vw 2.3vw;

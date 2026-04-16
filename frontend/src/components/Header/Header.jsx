@@ -2,12 +2,18 @@ import React from 'react'
 import './Header.css'
 
 const Header = () => {
+  const handleViewMenu = () => {
+    const menuElement = document.getElementById('explore-menu');
+    if (menuElement) {
+      menuElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className='header'>
       <div className="header-contents">
         <h2>Order your favourite food here</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas assumenda iusto ea deserunt quam aut quia quae explicabo in repellat!</p>
-        <button>View Menu</button>
+        <button onClick={handleViewMenu}>View Menu</button>
       </div>
     </div>
   )

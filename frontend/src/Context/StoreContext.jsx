@@ -86,15 +86,14 @@ const StoreContextProvider = (props) => {
     }
 
     // Load cart data from backend for a logged-in user
-    const loadCartData = async (token) => {
-        const response = await axios.post(
-            url + "/api/cart/get",
-            {},
-            { headers: { token } }
-        )
-        // Set cartItems from backend response
-        setCartItems(response.data.cartData)
-    }
+ const loadCartData = async (token) => {
+    const response = await axios.post(
+        url + "/api/cart/get",
+        {},
+        { headers: { token } }
+    )
+    setCartItems(response.data.cartData || {})
+}
 
     // useEffect runs once when component mounts
     useEffect(() => {

@@ -22,6 +22,25 @@ const Add = ({url}) => {
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
+    
+    // Validation
+    if (!image) {
+      toast.error("Please upload an image")
+      return
+    }
+    if (!data.name.trim()) {
+      toast.error("Please enter product name")
+      return
+    }
+    if (!data.description.trim()) {
+      toast.error("Please enter product description")
+      return
+    }
+    if (!data.price) {
+      toast.error("Please enter product price")
+      return
+    }
+    
     const formData = new FormData()
     formData.append("name", data.name)
     formData.append("description", data.description)
@@ -69,7 +88,7 @@ const Add = ({url}) => {
             <select onChange={onChangeHandler} value={data.category} name="category">
               <option value="Salad">Salad</option>
               <option value="Rolls">Rolls</option>
-              <option value="Deserts">Deserts</option>
+              <option value="Desserts">Desserts</option>
               <option value="Sandwich">Sandwich</option>
               <option value="Cake">Cake</option>
               <option value="Pure Veg">Pure Veg</option>
