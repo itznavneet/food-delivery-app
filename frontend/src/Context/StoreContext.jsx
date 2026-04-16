@@ -16,7 +16,7 @@ const StoreContextProvider = (props) => {
     const [cartItems, setCartItems] = useState({})
 
     // Backend server base URL
-    const url = "http://localhost:4000"
+    const url = "http://localhost:4000" || "https://food-delivery-backend-12pj.onrender.com"
 
     // Token will store authentication token of logged-in user
     const [token, setToken] = useState("")
