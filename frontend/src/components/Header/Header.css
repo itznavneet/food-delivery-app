@@ -1,9 +1,12 @@
 .header {
     height: 34vw;
     margin: 30px auto;
-    background: url('/image.png') no-repeat;
-    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     position: relative;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .header-contents {
@@ -11,7 +14,7 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 1.5 vw;
+    gap: 1.5vw;
     max-width: 50%;
     bottom: 10%;
     left: 6vw;
@@ -31,7 +34,6 @@
 
 .header-contents button {
     border: none;
-    /* margin-top: 20px; */
     cursor: pointer;
     color: #747474;
     font-weight: 500;
@@ -42,16 +44,18 @@
 }
 
 @media (max-width:1050px) {
-
-
     .header-contents {
-        max-width: 45%
+        max-width: 45%;
     }
 }
 
 @media (max-width:750px) {
+    .header {
+        height: 38vw;
+    }
+
     .header-contents {
-        max-width: 65%
+        max-width: 65%;
     }
 
     .header-contents p {
