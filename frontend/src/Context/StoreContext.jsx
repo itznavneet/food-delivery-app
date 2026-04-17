@@ -4,6 +4,7 @@ import axios from "axios";
 // Import createContext (for creating React context), 
 // useEffect (for side effects), and useState (for managing component state)
 import { createContext, useEffect, useState } from "react";
+import { BASE_URL } from "../config";
 
 // Create a new context object, initially with null as default value
 export const StoreContext = createContext(null)
@@ -16,7 +17,7 @@ const StoreContextProvider = (props) => {
     const [cartItems, setCartItems] = useState({})
 
     // Backend server base URL
-    const url = "http://localhost:4000" || "https://food-delivery-backend-12pj.onrender.com"
+    const url = BASE_URL
 
     // Token will store authentication token of logged-in user
     const [token, setToken] = useState("")

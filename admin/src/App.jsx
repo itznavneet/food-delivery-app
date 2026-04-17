@@ -6,9 +6,10 @@ import Add from './pages/Add/Add'
 import List from './pages/List/List'
 import Orders from './pages/Orders/Orders'
 import { ToastContainer} from 'react-toastify';
+import { BASE_URL } from './config'
 
 const App = () => {
-    const url= "http://localhost:4000" || "https://food-delivery-backend-12pj.onrender.com"
+    const url= BASE_URL
   
   return (
     <div>
